@@ -143,6 +143,8 @@ class ImageTag {
         return tvos;
       case Platform.types.Switch:
         return windows;
+      case Platform.types.VisionOS:
+        return generic;
 
       // Unsupported
       case Platform.types.Lumin:

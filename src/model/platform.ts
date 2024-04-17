@@ -17,6 +17,7 @@ class Platform {
       XboxOne: 'XboxOne',
       tvOS: 'tvOS',
       Switch: 'Switch',
+      VisionOS: 'VisionOS',
 
       // Unsupported
       Lumin: 'Lumin',

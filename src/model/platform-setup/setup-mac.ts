@@ -112,6 +112,9 @@ class SetupMac {
       case 'WebGL':
         moduleArgument.push('--module', 'webgl');
         break;
+      case 'VisionOS':
+        moduleArgument.push('--module', 'visionos');
+        break;
       default:
         throw new Error(`Unsupported module for target platform: ${targetPlatform}.`);
     }

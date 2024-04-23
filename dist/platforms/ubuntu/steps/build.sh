@@ -7,6 +7,9 @@
 UNITY_PROJECT_PATH="$GITHUB_WORKSPACE/$PROJECT_PATH"
 echo "Using project path \"$UNITY_PROJECT_PATH\"."
 
+UNITY_GLOBAL_CACHE_PATH="/root/.config/unity3d"
+echo "Using global cache path \"$UNITY_GLOBAL_CACHE_PATH\"."
+
 #
 # Display the name for the build, doubles as the output name
 #
@@ -140,9 +143,10 @@ fi
 
 # Make a given user owner of all artifacts
 if [[ -n "$CHOWN_FILES_TO" ]]; then
-  echo "Changing ownership of files to $CHOWN_FILES_TO for $BUILD_PATH_FULL and $UNITY_PROJECT_PATH"
+  echo "Changing ownership of files to $CHOWN_FILES_TO for $BUILD_PATH_FULL, $UNITY_PROJECT_PATH and $UNITY_GLOBAL_CACHE_PATH"
   chown -R "$CHOWN_FILES_TO" "$BUILD_PATH_FULL"
   chown -R "$CHOWN_FILES_TO" "$UNITY_PROJECT_PATH"
+  chown -R "$CHOWN_FILES_TO" "$UNITY_GLOBAL_CACHE_PATH"
 fi
 
 # Add read permissions for everyone to all artifacts

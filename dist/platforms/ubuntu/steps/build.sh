@@ -152,6 +152,7 @@ fi
 # Add read permissions for everyone to all artifacts
 chmod -R a+r "$BUILD_PATH_FULL"
 chmod -R a+r "$UNITY_PROJECT_PATH"
+chmod -R a+r "$UNITY_GLOBAL_CACHE_PATH"
 
 # Add execute permissions to specific files
 if [[ "$BUILD_TARGET" == "StandaloneOSX" ]]; then

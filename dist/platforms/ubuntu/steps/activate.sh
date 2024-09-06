@@ -35,7 +35,6 @@ if [[ -n "$UNITY_SERIAL" && -n "$UNITY_EMAIL" && -n "$UNITY_PASSWORD" ]]; then
       -password "$UNITY_PASSWORD" \
       -noUpm \
       -disable-assembly-updater \
-      -nographics \
       -projectPath "/BlankProject"
 
     # Store the exit code from the verify command

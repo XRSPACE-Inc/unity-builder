@@ -35,6 +35,7 @@ if [[ -n "$UNITY_SERIAL" && -n "$UNITY_EMAIL" && -n "$UNITY_PASSWORD" ]]; then
       -password "$UNITY_PASSWORD" \
       -noUpm \
       -nographics \
+      -batchmode \
       -disable-assembly-updater \
       -projectPath "/BlankProject"
 

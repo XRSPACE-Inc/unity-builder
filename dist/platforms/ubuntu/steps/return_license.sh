@@ -16,6 +16,7 @@ elif [[ -n "$UNITY_SERIAL" ]]; then
     -logFile /dev/stdout \
     -quit \
     -returnlicense \
+    -batchmode \
     -username "$UNITY_EMAIL" \
     -password "$UNITY_PASSWORD" \
     -projectPath "/BlankProject"

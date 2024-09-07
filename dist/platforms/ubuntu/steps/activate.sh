@@ -21,7 +21,7 @@ if [[ -n "$UNITY_SERIAL" && -n "$UNITY_EMAIL" && -n "$UNITY_PASSWORD" ]]; then
   retry_count=0
 
   # Initialize delay to 15 seconds
-  delay=15
+  delay=1
 
   # Loop until UNITY_EXIT_CODE is 0 or retry count reaches 5
   while [[ $retry_count -lt 5 ]]
@@ -34,6 +34,7 @@ if [[ -n "$UNITY_SERIAL" && -n "$UNITY_EMAIL" && -n "$UNITY_PASSWORD" ]]; then
       -username "$UNITY_EMAIL" \
       -password "$UNITY_PASSWORD" \
       -noUpm \
+      -nographics \
       -disable-assembly-updater \
       -projectPath "/BlankProject"
 
